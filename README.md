@@ -3,6 +3,7 @@
 This is a tensoflow based face recognization which enable to detect gender, age and emotion.
 It is higly inspired by [FaceNet](https://github.com/davidsandberg/facenet).
 
+![image](https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/screenshot.png)
 
 ## Installation
 
@@ -55,3 +56,5 @@ face_api.register_new_face(embeding)
 ```
 
 
+## License
+FaceRecognitionAPI is released under the terms of the MIT license. See LICENSE for more information or see https://opensource.org/licenses/MIT.
