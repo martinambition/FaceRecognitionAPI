@@ -9,7 +9,7 @@ Learn from consumer behavior to improve conversion rates and transaction size. M
 
 With In-Store Analytics, B1 Retailers can leverage the power of digital footprints to apply the same tools as their online counterparts. 
 
-![image](https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/inshop.jpg)
+<img src="https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/inshop.jpg" width="100%">
 
 
 ![image](https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/report1.png)
