@@ -2,12 +2,15 @@
 
 Click-throughs, bounce rates, segmentation and conversion funnels are common and essential metrics for any online store. Brands which do not employ these to enhance the experience will miss out on targeted content, display optimization and personalized recommendations which account for over 20% of an online-stores revenue.
 
-When it comes to bricks and mortar these tools are sorely missing. Sessions, cookies and preferences just don't exist in the real world until now.
+We take the latest artificial intelligence breakthroughs in the field of vision-based Human Computer Interaction (HCI) to change the game. AI algorithms detect your visitors demographics - such as age, gender, which can be leveraged for marketing compaign segmentations. Capturing the emotional state of your visitor is a new way to measure customer satisfaction in a digital ear. 
 
-We take the latest artificial intelligence breakthroughs in the field of vision-based Human Computer Interaction (HCI) to change the game. With In-Store Analytics, B1 Retailers can leverage the power of digital footprints to apply the same tools as their online counterpart
+Learn from consumer behavior to improve conversion rates and transaction size. Measure the entire-funnel from walk-by through to completing a sale. Automatically exclude store staff from traffic counting and other KPI metrics. Compare your performance against your industry on a local, regional or national level.
 
 
-<img src="https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/inshop.jpg" width="100%">
+With In-Store Analytics, B1 Retailers can leverage the power of digital footprints to apply the same tools as their online counterparts. 
+
+![image](https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/inshop.jpg)
+
 
 ![image](https://raw.githubusercontent.com/martinambition/FaceRecognitionAPI/master/report1.png)
 
@@ -15,73 +18,81 @@ We take the latest artificial intelligence breakthroughs in the field of vision-
 
 
 
-## Installation
-You could choose to install from release build or complie the source code by yourself. Currently, we only support windows platform. MacOS & Linux will being supported soon.
+# Installation
+You can install In-Store Analytics in either of the following ways:
+
+* if you want to use the standard package, install from the release build
+* if you want to customise the analytic functions, install by using the source code 
+
+***Currently, In-Sotre Analytics is available on the Windows platform only.***
 
 ---
-### Install from release build (Recommand):
-#### Requirements
-  * Java Runtime Environment
-  * [SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=1695/)
-#### Installation Guidance
-1. Download release [build](http://note.youdao.com/)
-2. Unzip build.zip
-3. Setup the database
-    1. Create a database named "**ShopAnalytics**"
+## Install from the release build:
+### Prerequisit
+You have enabled the followings on your computer:
+
+* Java runtime environment
+* [SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=1695/)
+
+### Procedure
+1. Download the release [build](http://note.youdao.com/)
+2. Extract file “build.zip”
+3. In SQL Server, create a database
+    1. Name the database "**ShopAnalytics**"
     2. Execute "DB/**DBCreate.sql**"
 
-#### How to Run
-1. Go to the unzipped folder
-2. Run "InitData.bat" and input the account & password of database
+### Running In-Store Analytics
+1. Navigate to folder ...In-Store Analytics\
+2. Run "InitData.bat"
 3. Run "CameraServer.exe" 
-4. Run "AnalyticsServer.bat" and input the account & password of database
-5. Open "http://localhost:8080/client/index.html"
+4. Run "AnalyticsServer.bat", and enter the account name and password of the created database
+5. In any browser, go to http://IP:8080/client/index.html
 
 ----
 
-### Install from source code on Windows:
+## Install from the source code:
+In-Store Analytics contains three parts: the database, the camera server, and the analytics server.
 
-#### Requirements
+### Prerequisit
+You have enabled the followings on your computer:
 
   * [SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=1695/)
   * [Anaconda](https://www.anaconda.com/download/) 
   * JDK 1.8
   * [Gradle](https://gradle.org/install/#manually)
 
-#### Installation Guidance
+### Procedure
 
-In-Store Analytics contains three parts (Database, Camera Server and Analytics Server).
-
-1. Clone/Dowload source code from repo
-2. Setup the database
-    1. Create a database named "**ShopAnalytics**" 
+1. Copy or dowload source code from the repo
+2. In SQL Server, create a database
+    1. Name the database "**ShopAnalytics**" 
     2. Execute "DB/**DBCreate.sql**"
-3. Install Camera Server(python)
-    1. Open your Anaconda Prompt from the start menu
-    2. Change directory to the Camera folder
-    3. Run below command 
-    ```console
-        conda env create -f environment.yml -n face
-    ```
-4. Install Analytics Server(java)
-    1. Change directory to Analytics folder
-    2. Fill the connection string of db in application.properties 
-    2. Run below command to build java source code.
-    ```console
-        gralde build
-    ```
+3. Install the camera server, using python
+    1. From the Start menu, open your Anaconda Prompt
+    2. Change the directory to the "Camera" folder
+    3. Execute the following command:  
+        ```console
+            conda env create -f environment.yml -n face
+        ```
+4. Install the analytics server, using java
+    1. Change the directory to the "Analytics" folder
+    2. In file "application.properties", fill the connection strings of the database  
+    3. Execute the following command:  
+        ```console
+            gralde build
+        ```
 
-#### How to Run
-1. Run "InitData.bat" and input the account & password of database
-1. Run below command to start the python server
+### Running In-Store Analytics
+1. Run "InitData.bat"
+2. Execute the following command to start the python server:
     ```console
         python server.py
     ```
-2. Run below command. please change the username and password accordingly
+3. Execute the following command with your own username and password:
     ```console
         java -jar ServerCenter-0.0.1.jar --spring.datasource.username=sa --spring.datasource.password=XX
     ```
-3. Open "http://localhost:8080/client/index.html"
+4. In any browser, go to http://IP:8080/client/index.html
 
 ## License
-In-Store Analytics is released under the terms of the MIT license. See LICENSE for more information or see https://opensource.org/licenses/MIT.
+In-Store Analytics is released under the terms of the MIT license. For more information, see LICENSE or visit https://opensource.org/licenses/MIT.
