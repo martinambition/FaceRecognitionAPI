@@ -18,6 +18,7 @@ You have installed the followings on your computer:
 ### Procedures
 1. Import file enviorment.yml to create a new environment. 
    Please note it may take more than 10 minutes to download packages.
+2. Download the face recognization models from [here](https://drive.google.com/open?id=1NRhwIGPhyhR9uqQb8EmZigEwOoirTO_8), and extract to "face_process\models"
 2. Run the real time camera detection by execute the followings:
 > python main.py
 
